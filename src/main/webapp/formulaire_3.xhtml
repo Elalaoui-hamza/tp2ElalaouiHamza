@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <title>Application&gt;formulaire_3</title>
+    </h:head>
+    <h:body>
+
+     <h1>Application&gt;formulaire_3</h1>
+
+     <h:form>
+        <h:outputLabel value="Entrez un nombre" for="nombre"/>
+        <h:inputText id="nombre" value="#{bean.nombre}"/>
+        <!-- <h:commandButton value="Valider" action="affichage_2"/> -->
+        <!-- <h:link value="Valider" outcome="affichage_3" /> -->
+        <h:commandButton value="Valider" action="#{bean.afficher()}"/>
+      </h:form>
+
+    </h:body>
+</html>
