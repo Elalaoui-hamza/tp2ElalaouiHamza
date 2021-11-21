@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./WEB-INF/templates/template_defaut.xhtml">
+            <ui:param name="titre" value="Exercice 4"/>
+
+            <ui:define name="metadata">
+                <f:metadata>
+                    <f:viewParam name="nb" value="#{bean2.nombre}"/>
+                </f:metadata>
+            </ui:define>
+
+            <ui:define name="content">
+                <h1>Application&gt;formulaire__4</h1>
+
+                <h:form>
+                    <h:outputLabel value="Entrez un nombre" for="nombre"/>
+                    <h:inputText id="nombre" value="#{bean2.nombre}"/>
+                    <h:message for="nombre"/>
+                    <br/>
+                    <h:commandButton value="Valider" 
+                                     action="#{bean2.afficher()}"/>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
